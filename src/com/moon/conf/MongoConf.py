@@ -7,5 +7,6 @@ class DbClient:
         self.client=MongoClient("172.19.5.162",27017)
         self.name='wechat'
         self.db=self.client[self.name]
+        self.groupMessage=self.db['groupMessage']
 
 
