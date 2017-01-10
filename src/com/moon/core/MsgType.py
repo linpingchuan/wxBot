@@ -14,11 +14,11 @@ class MsgType:
                 6 -> Special
                 99 -> Unknown
         '''
-        self.Init=0
-        self.Self=1
-        self.FileHelper=2
-        self.Group=3
-        self.Contact=4
-        self.Public=5
-        self.Special=6
-        self.Unknown=99
+        self.Init = 0
+        self.Self = 1
+        self.FileHelper = 2
+        self.Group = 3
+        self.Contact = 4
+        self.Public = 5
+        self.Special = 6
+        self.Unknown = 99
