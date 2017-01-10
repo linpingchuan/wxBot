@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 from src.com.moon.core.Bootstrap import Bootstrap
-from src.com.moon.core.ServiceManager import ServiceManager
-from src.com.moon.router.MessageDispatcher import MessageDispatcher
-from src.com.moon.router.MessageProcessor import MessageProcessor
 from wxbot import *
 
 

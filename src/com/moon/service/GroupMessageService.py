@@ -1,14 +1,8 @@
 # coding:utf8
-from src.com.moon.core.Message import MessageDecorator
+from src.com.moon.core.MessageService import MessageService
 
 
-class GroupMessageService:
-    '''
-        群消息服务
-    '''
-    def __init__(self,messageProcessor):
-        self.messageProcessor=messageProcessor
-
+class GroupMessageService(MessageService):
     def execute(self,messageDecorator):
         msg='无与伦比，为杰沉沦'
         self.messageProcessor.processMssage(msg,messageDecorator.user.id)

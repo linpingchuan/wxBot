@@ -26,4 +26,7 @@ class MessageDispatcher:
         if self.messageDecorator.message.msgTypeId == MsgType.Contact:
             pass
         elif self.messageDecorator.message.msgTypeId == MsgType.Group:
-            self.serviceManager.groupMessageService.execute(msg)
+            self.serviceManager.groupMessageService.execute(self.messageDecorator)
+            pass
+        elif self.messageDecorator.message.msgTypeId == MsgType.Self:
+            self.serviceManager.selfMessageService.execute(self.messageDecorator)
