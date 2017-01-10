@@ -50,7 +50,7 @@ Web微信协议参考资料：
 
 **wxBot** 用到了Python **requests** , **pypng** , **Pillow** , **pyqrcode**,**Enum** 库。
 
-使用之前需要所依赖的库:
+1.1使用之前需要所依赖的库:
 
 ```bash
 pip install requests
@@ -59,6 +59,10 @@ pip install pypng
 pip install Pillow
 pip install Enum
 ```
+
+1.2 使用MongoDb
+
+[MongoDb配置文件](./doc/mongo.md)
 
 ## 2 快速开发
 
