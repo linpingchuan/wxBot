@@ -1,7 +1,7 @@
 # coding:utf8
 
 class MsgType:
-    def __init__(self):
+
         '''
         处理原始微信消息的内部函数
             msg_type_id:
@@ -14,11 +14,11 @@ class MsgType:
                 6 -> Special
                 99 -> Unknown
         '''
-        self.Init = 0
-        self.Self = 1
-        self.FileHelper = 2
-        self.Group = 3
-        self.Contact = 4
-        self.Public = 5
-        self.Special = 6
-        self.Unknown = 99
+        Init = 0
+        Self = 1
+        FileHelper = 2
+        Group = 3
+        Contact = 4
+        Public = 5
+        Special = 6
+        Unknown = 99
