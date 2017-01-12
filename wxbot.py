@@ -84,7 +84,8 @@ class WXBot:
         self.sync_key_str = ''
         self.sync_key = []
         self.sync_host = ''
-
+        # 是否打开mongodb存储
+        self.open_mongodb=False
 
         self.batch_count = 50    #一次拉取50个联系人的信息
         self.full_user_name_list = []    #直接获取不到通讯录时，获取的username列表
@@ -152,6 +153,7 @@ class WXBot:
             with open(os.path.join(self.temp_pwd,'contacts.json'), 'w') as f:
                 f.write(r.text.encode('utf-8'))
         dic = json.loads(r.text)
+
         self.member_list = dic['MemberList']
 
         special_users = ['newsapp', 'fmessage', 'filehelper', 'weibo', 'qqmail',
@@ -671,6 +673,7 @@ class WXBot:
                 if self.is_big_contact and len(self.full_user_name_list) == 0:
                     self.full_user_name_list = msg['StatusNotifyUserName'].split(",")
                     self.wxid_list = re.search(r"username&gt;(.*?)&lt;/username", msg["Content"]).group(1).split(",")
+                    print(self.wxid_list)
                     with open(os.path.join(self.temp_pwd,'UserName.txt'), 'w') as f:
                         f.write(msg['StatusNotifyUserName'])
                     with open(os.path.join(self.temp_pwd,'wxid.txt'), 'w') as f:

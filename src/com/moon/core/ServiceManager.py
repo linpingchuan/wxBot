@@ -20,3 +20,6 @@ class ServiceManager:
 
     def selfMessageService(self):
         return self.selfMessageService
+
+    def fileHelperMessageService(self):
+        return self.fileHelperMessageService()

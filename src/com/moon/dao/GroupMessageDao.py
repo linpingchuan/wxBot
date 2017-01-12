@@ -1,5 +1,4 @@
 # coding:utf8
-from src.com.moon.conf import MongoConf
 from src.com.moon.conf.MongoConf import DbClient
 from src.com.moon.dao.MessageDao import MessageDao
 
