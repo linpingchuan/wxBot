@@ -1,8 +1,14 @@
 # coding:utf8
+import json
+
 from src.com.moon.core.MessageService import MessageService
+from src.com.moon.dao.GroupMessageDao import GroupMessageDao
 
 
 class GroupMessageService(MessageService):
     def execute(self,messageDecorator):
-        msg='无与伦比，为杰沉沦'
-        self.messageProcessor.processMssage(msg,messageDecorator.user.id)
+        groupMessageDao=GroupMessageDao()
+        messageJson=json.dumps(messageDecorator.msg)
+        groupMessageDao.insertMessage(messageJson)
+        # self.messageProcessor.processMssage('',messageDecorator.user.id)
+
