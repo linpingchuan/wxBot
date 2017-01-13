@@ -2,7 +2,6 @@
 from src.com.moon.service.ContactMessageService import ContactMessageService
 from src.com.moon.service.FileHelperMessageService import FileHelperMessageService
 from src.com.moon.service.GroupMessageService import GroupMessageService
-from src.com.moon.service.JiebaService import jieba_service
 from src.com.moon.service.SelfMessageService import SelfMessageService
 
 
@@ -19,5 +18,4 @@ class ServiceManager:
         self.selfMessageService=SelfMessageService(self.messageProcessor)
         self.fileHelperMessageService=FileHelperMessageService(self.messageProcessor)
         self.contactMessageService=ContactMessageService(self.messageProcessor)
-        self.jiebaService=jieba_service(self.messageProcessor)
 
