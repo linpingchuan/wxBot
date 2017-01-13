@@ -29,5 +29,7 @@ class MessageDispatcher:
             self.serviceManager.groupMessageService.execute(self.messageDecorator)
         elif self.messageDecorator.message.msgTypeId == MsgType.Self:
             self.serviceManager.selfMessageService.execute(self.messageDecorator)
-        elif self.messageDecorator.message.msgTypeId==MsgType.FileHelper:
-            self.serviceManager.fileHelperMessageService().execute(self.messageDecorator)
+        elif self.messageDecorator.message.msgTypeId == MsgType.FileHelper:
+            self.serviceManager.fileHelperMessageService.execute(self.messageDecorator)
+        elif self.messageDecorator.message.msgTypeId == MsgType.Contact:
+            self.serviceManager.contactMessageService.execute(self.messageDecorator)

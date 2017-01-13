@@ -1,5 +1,8 @@
 # coding:utf8
+from src.com.moon.service.ContactMessageService import ContactMessageService
+from src.com.moon.service.FileHelperMessageService import FileHelperMessageService
 from src.com.moon.service.GroupMessageService import GroupMessageService
+from src.com.moon.service.JiebaService import jieba_service
 from src.com.moon.service.SelfMessageService import SelfMessageService
 
 
@@ -14,12 +17,7 @@ class ServiceManager:
     def register(self):
         self.groupMessageService=GroupMessageService(self.messageProcessor)
         self.selfMessageService=SelfMessageService(self.messageProcessor)
+        self.fileHelperMessageService=FileHelperMessageService(self.messageProcessor)
+        self.contactMessageService=ContactMessageService(self.messageProcessor)
+        self.jiebaService=jieba_service(self.messageProcessor)
 
-    def groupMessageService(self):
-        return self.groupMessageService
-
-    def selfMessageService(self):
-        return self.selfMessageService
-
-    def fileHelperMessageService(self):
-        return self.fileHelperMessageService()
